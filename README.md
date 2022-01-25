@@ -2,9 +2,16 @@
 
 ## Compare R2dbc and JDBC
 
+### Test environment
+
+동일한 환경에서 같은 부하를 주입했을 때 성능을 비교해본다.
+
+* MacBook Pro Apple M1 (8core), 16GB
+* Test tool : vegeta
+
 ### R2dbc
 
-1446 TPS
+1,446 TPS
 
 ```
 → vegeta attack -duration=10s -format=http -targets=createRealtimeaccept -rate=1500 | tee result.bin | vegeta report
